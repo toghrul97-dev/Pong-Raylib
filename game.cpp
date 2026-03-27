@@ -20,15 +20,15 @@ void Game::init(){
     botX = BOT_X_POSITION;
     botY = BOT_Y_POSITION;
 
-    paddleSpeed = 8.0f;
-    botPaddleSpeed = 5.0f;
+    paddleSpeed = 8.5f;
+    botPaddleSpeed = 5.5f;
     dashHeight = 30;   
     gapHeight  = 15;  
     lineWidth = 10;
     dashedLineX = WINDOW_WIDTH / 2 - lineWidth/2;
 
     ballRadius = 13.0f;
-    ballSpeed = 7.5f;
+    ballSpeed = 8.5f;
     ballDirX = -1; 
     ballDirY = 1; 
     ballXpos = WINDOW_WIDTH / 2;
@@ -144,12 +144,14 @@ void Game::init(){
 }
 
 void Game::startBall(){
-    float randomArr[] = {-0.5, 0.5};
+    float randomArrY[] = {-0.4, 0.4};
     float randomArrX[] = {-1, 1};
-    int size = sizeof(randomArr) / sizeof(randomArr[0]);
-    int randomIndex = std::rand() % size;
-    ballDirY = randomArr[randomIndex];
-    ballDirX = randomArrX[randomIndex];
+    int size = sizeof(randomArrY) / sizeof(randomArrY[0]);
+    int indexY = std::rand() % 2;
+    int indexX = std::rand() % 2;
+
+    ballDirY = randomArrY[indexY];
+    ballDirX = randomArrX[indexX];
     if(botWonRound) ballDirX = 1;
     else if(playerWonRound) ballDirX = -1;
 }
@@ -657,14 +659,17 @@ void Game::draw(){
 
         ShowCursor();
 
-        if(playerWonGame){
-            DrawText("RED WINS!", playerWonTextCentered,
-                WON_TEXT_HEIGHT, WON_TEXT_SIZE, red);
-        }
+        bool showText = ((int)(GetTime() * 4) % 4) != 0;
 
-        else if(botWonGame){
-            DrawText("YELLOW WINS!", botWonTextCentered, 
-                WON_TEXT_HEIGHT, WON_TEXT_SIZE, yellow);
+        if(showText){
+            if(playerWonGame){
+                DrawText("RED WINS!", playerWonTextCentered,
+                    WON_TEXT_HEIGHT, WON_TEXT_SIZE, red);
+            }
+            else if(botWonGame){
+                DrawText("YELLOW WINS!", botWonTextCentered, 
+                    WON_TEXT_HEIGHT, WON_TEXT_SIZE, yellow);
+            }
         }
         // Button Costumization.
         GuiSetStyle(BUTTON, BORDER_WIDTH, BUTTON_BORDER_WIDTH);

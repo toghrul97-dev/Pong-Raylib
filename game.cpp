@@ -21,7 +21,7 @@ void Game::init(){
     botY = BOT_Y_POSITION;
 
     paddleSpeed = 8.5f;
-    botPaddleSpeed = 5.5f;
+    botPaddleSpeed = 5.2f;
     dashHeight = 30;   
     gapHeight  = 15;  
     lineWidth = 10;
@@ -397,7 +397,7 @@ void Game::update(){
             gameState = Gamestate::RoundOver;
         }
 
-        ballSpeed = ballSpeed + 0.001;
+        ballSpeed = ballSpeed + 0.0007;
     }
 
     if(gameState == Gamestate::RoundOver){

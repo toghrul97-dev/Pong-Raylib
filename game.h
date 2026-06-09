@@ -66,7 +66,8 @@
 #define WON_TEXT_SIZE 85
 
 #define BALL_CONTACT_MARGIN 5
-#define MAX_SCORE 10
+#define MAX_SCORE 5
+#define BALL_SPEED 10
 
 class Game{
 

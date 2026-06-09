@@ -21,14 +21,14 @@ void Game::init(){
     botY = BOT_Y_POSITION;
 
     paddleSpeed = 8.5f;
-    botPaddleSpeed = 5.2f;
+    botPaddleSpeed = 5.5f;
     dashHeight = 30;   
     gapHeight  = 15;  
     lineWidth = 10;
     dashedLineX = WINDOW_WIDTH / 2 - lineWidth/2;
 
     ballRadius = 13.0f;
-    ballSpeed = 8.5f;
+    ballSpeed = BALL_SPEED;
     ballDirX = -1; 
     ballDirY = 1; 
     ballXpos = WINDOW_WIDTH / 2;
@@ -705,7 +705,7 @@ void Game::reset(){
     botBottomBorderHit = false;
     botTopBorderHit = false;
     scoreUpdated = false;
-    ballSpeed = 7.5f;
+    ballSpeed = BALL_SPEED;
     playerWonRound = false;
     botWonRound = false;
     roundTimerActive = false;

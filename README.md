@@ -33,8 +33,8 @@ S — Move down
 
 Built With:
 
-C++
-Raylib
+C++,
+Raylib,
 raygui
 
 ![Pong gameplay](assets/pong.png)

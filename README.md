@@ -1,10 +1,37 @@
-# Pong (C++ + Raylib)
+Pong - Raylib
 
-Simple Pong game for Windows.  
+A simple Pong game made with C++ and Raylib.
 
-**How to Play:**  
-- Download ZIP, extract.  
-- Keep `pong.exe` and `raylib.dll` together.  
-- Double-click `pong.exe`.  
+Features:
 
-**Files:** `pong.exe`, `raylib.dll`, source files (`.cpp`, `.h`). 
+Play against the computer
+Local multiplayer on the same computer
+Keyboard or mouse controls
+Scoreboard
+First player to reach 10 points wins
+Ball gradually increases in speed as the round progresses
+Ball speed resets when a new round starts
+
+
+Controls:
+
+Player 1
+
+W — Move up
+S — Move down
+
+
+Player 2
+
+↑ — Move up
+↓ — Move down
+
+
+
+Built With:
+
+C++
+Raylib
+raygui
+
+![Pong gameplay](assets/pong.png)

@@ -17,16 +17,17 @@ Controls:
 
 Player 1
 
-W — Move up
+↑ — Move up
 
-S — Move down
+↓ — Move down
+
 
 
 Player 2
 
-↑ — Move up
+W — Move up
 
-↓ — Move down
+S — Move down
 
 
 

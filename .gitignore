@@ -1,0 +1,11 @@
+# Build output
+build/
+
+# Compiled programs
+*.exe
+
+# Dynamic libraries
+*.dll
+
+# Object files
+*.o
